@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Ad Blocker",
+  "version": "1.0",
+  "description": "Blocks ads on YouTube videos.",
+  "icons": {
+    "16": "icon/icon16.png",
+    "48": "icon/icon48.png",
+    "128": "icon/icon128.png"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
